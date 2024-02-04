@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const App = () => {
 
-  const [isGameStarted, setisGameStarted] = useState(true);
+  const [isGameStarted, setisGameStarted] = useState(0);
 
   const startGamePlay = ()=>{
     setisGameStarted((scene)=>!scene);
