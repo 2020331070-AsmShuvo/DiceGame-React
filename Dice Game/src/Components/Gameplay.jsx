@@ -1,7 +1,10 @@
+import TotalScore from "./TotalScore";
+
 const Gameplay = () => {
+    console.log("Gameplay component rendered");
     return (
         <div>
-            <h1>game play</h1>
+            <TotalScore/>
         </div>
     );
 };

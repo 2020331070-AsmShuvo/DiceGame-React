@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const StartGame = () => {
+const StartGame = ({change}) => {
     return (
         <Container>
             <div>
@@ -7,7 +7,7 @@ const StartGame = () => {
             </div>
             <div>
                 <h1>Dice Game</h1>
-                <Button>Play Now</Button>
+                <Button onClick={change}>Play Now</Button>
             </div>
         </Container>
     );

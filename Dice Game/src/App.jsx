@@ -1,21 +1,20 @@
-import styled from "styled-components";
 import StartGame from "./Components/StartGame";
-import { useState } from "react";
 import Gameplay from "./Components/Gameplay";
+import { useState } from "react";
 
 
 const App = () => {
 
-  const [gameStarted, setGameStarted] = useState(false);
+  const [isGameStarted, setisGameStarted] = useState(true);
 
-  const gotoGamePlay = ()=>{
-    setGameStarted((scene)=> !scene)
+  const startGamePlay = ()=>{
+    setisGameStarted((scene)=>!scene);
   };
 
   return (
     <div>
       {
-        gameStarted?<Gameplay/> : <StartGame changeScreen={gotoGamePlay}/>
+        isGameStarted ? <Gameplay/> : <StartGame change={startGamePlay}/>
       }
     </div>
   );
